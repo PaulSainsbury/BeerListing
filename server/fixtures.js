@@ -55,6 +55,7 @@ var Fixture = {
   createBeers: function(users, breweries, beerTypes) {
     function addBeer (beer) {
       var id = Meteor.call('beerInsert', beer);
+      console.log('Beer:', id);
       return Beers.findOne(id);
     }
 

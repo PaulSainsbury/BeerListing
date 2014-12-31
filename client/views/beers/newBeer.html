@@ -1,0 +1,67 @@
+<template name="newBeer">
+  <form id="tasting">
+    <div class="row form-group">
+      <label for="breweryId" class="col-sm-1 control-label">Brewery:</label>
+
+      <div class="col-sm-5">
+        <select class="form-control input-sm" id="breweryId" placeholder="Brewery">
+          {{#each breweries}}
+          <option value="{{_id}}">{{name}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <button class="btn btn-sm" type="button" id="newBrewery">New</button>
+    </div>
+    <div class="row form-group">
+      <label for="beerName" class="col-sm-1 control-label">Name:</label>
+      <div class="col-sm-5">
+        <input class="form-control input-sm" type="text" id="beerName" placeholder="Name" />
+      </div>
+    </div>
+    <div class="row form-group">
+      <label for="alcohol" class="col-sm-1 control-label">Alcohol:</label>
+      <div class="col-sm-2">
+        <input class="form-control input-sm" type="number" id="alcohol" placeholder="Alcohol" />
+      </div>
+      <div class="col-sm-1">
+        %
+      </div>
+    </div>
+    <div class="row form-group">
+      <label for="servingType" class="col-sm-1 control-label">Serving Type:</label>
+      <div class="col-sm-5">
+        <select class="form-control input-sm" id="servingType" placeholder="Type">
+          <option>Tap</option>
+          <option>Bottle</option>
+          <option>Can</option>
+        </select>
+      </div>
+    </div>
+    <div class="row form-group">
+      <label for="beerTypeId" class="col-sm-1 control-label">Beer Type:</label>
+
+      <div class="col-sm-5">
+        <select class="form-control input-sm" id="beerTypeId" placeholder="Type">
+          {{#each beerTypes}}
+          <option value="{{_id}}">{{name}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <button class="btn btn-sm" type="button" id="newBeerType">New</button>
+    </div>
+
+    <div class="row form-group">
+      <label for="beerNotes" class="col-sm-1 control-label">Notes:</label>
+      <div class="col-sm-5">
+        <textarea class="form-control input-sm" id="beerNotes" placeholder="Notes"></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class=col-sm-5></div>
+      <div class=col-sm-1>
+        <button type="submit" class="btn btn-primary input-sm">Submit</button>
+      </div>
+    </div>
+  </form>
+</template>

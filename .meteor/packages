@@ -10,3 +10,4 @@ twbs:bootstrap
 accounts-password
 iron:router
 ian:accounts-ui-bootstrap-3
+mrt:moment
