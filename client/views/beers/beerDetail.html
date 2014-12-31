@@ -1,0 +1,8 @@
+<template name="beerDetail">
+  {{beer.name}}  {{brewery.name}}<br/>
+  {{beer.averageRating}}  {{beer.firstTasted}}<br/>
+  {{beer.notes}}<br/>
+  {{#each beer.tastings}}
+    {{>tastingItem}}
+  {{/each}}
+</template>
