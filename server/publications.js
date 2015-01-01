@@ -14,3 +14,10 @@ Meteor.publish('beerTypes', function() {
 Meteor.publish('breweries', function() {
   return Breweries.find();
 });
+
+Meteor.publish('findImageByBeerId', function(beerId){
+    var beer = Beers.findOne({ _id: beerId});
+    if (beer) {
+      return Images.find({ _id: beer.imageId });
+    }
+});

@@ -2,6 +2,9 @@
   {{beer.name}}  {{brewery.name}}<br/>
   {{beer.averageRating}}  {{firstTastedDate}}<br/>
   {{beer.notes}}<br/>
+  {{#if image}}
+    <img src="{{image.url store='images'}}" /><br/>
+  {{/if}}
   New Tasting:<br/>
   <form id="tasting">
     <div class="row form-group">

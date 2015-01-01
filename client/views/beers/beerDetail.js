@@ -3,9 +3,18 @@ Template.beerDetail.helpers({
     return moment(new Date()).format("YYYY-MM-DD");
   },
   firstTastedDate : function () {
-    return moment(this.beer.firstTasted).format("YYYY-MM-DD");
-  }
+    if (this.beer.firstTasted)
+      return moment(this.beer.firstTasted).format("YYYY-MM-DD");
+    else
+      return 'Not yet tasted';
+  },
+  imageUrl : function() {
 
+    if (this.image) {
+      return this.image.url;
+    }
+    return null;
+  }
 });
 
 Template.beerDetail.events({

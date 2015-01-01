@@ -11,3 +11,6 @@ accounts-password
 iron:router
 ian:accounts-ui-bootstrap-3
 mrt:moment
+cfs:graphicsmagick
+cfs:standard-packages
+cfs:filesystem

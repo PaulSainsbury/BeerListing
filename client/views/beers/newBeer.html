@@ -1,5 +1,5 @@
 <template name="newBeer">
-  <form id="tasting">
+  <form id="tasting" enctype="multipart/form-data" method="post">
     <div class="row form-group">
       <label for="breweryId" class="col-sm-1 control-label">Brewery:</label>
 
@@ -54,6 +54,13 @@
       <label for="beerNotes" class="col-sm-1 control-label">Notes:</label>
       <div class="col-sm-5">
         <textarea class="form-control input-sm" id="beerNotes" placeholder="Notes"></textarea>
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <label for="beerImage" class="col-sm-1 control-label">Image:</label>
+      <div class="col-sm-5">
+        <input class="form-control input-sm" type="file" accept="image/*" id="beerImage" placeholder="beerImage" />
       </div>
     </div>
 
